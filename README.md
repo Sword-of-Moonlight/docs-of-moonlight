@@ -1,2 +1,2 @@
-# docs-of-moonlight
-Documentation for using the Sword of Moonlight game engine
+# Docs of Moonlight
+An open documentation effort for the Sword of Moonlight game engine, released by FromSoftware in 2000.
