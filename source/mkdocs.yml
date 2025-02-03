@@ -1,0 +1,44 @@
+site_name: Sword of Moonlight » Compendium
+site_url: https://www.swordofmoonlight.com/
+
+extra_css:
+  - css/extra.css
+
+nav:
+  - Home: index.md
+  - Introduction:
+    - About Sword of Moonlight: introduction/about_som.md
+    - Installation:
+      - Basic Installation: installation/basic-installation.md
+      - Virtual Machine Installation: installation/virtual-machine-installation.md
+      - Lawful Blade Installation: installation/lawful-blade-installation.md
+  - Content Authoring:
+    - Authoring Custom Textures: contentauthoring/authoring-custom-textures.md
+  - Glossary: introduction/glossary.md
+
+theme:
+  name: material
+  logo: assets/mls.webp
+  favicon: assets/favicon.webp
+  features:
+    - toc.follow
+    - toc.integrate 
+    - navigation.sections
+    - navigation.expand
+  palette:
+    - scheme: default
+      primary: light blue
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+    - scheme: slate
+      primary: cyan
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+        
+markdown_extensions:
+  - toc:
+      permalink: true
