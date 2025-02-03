@@ -7,11 +7,13 @@ extra_css:
 nav:
   - Home: index.md
   - Introduction:
-    - About Sword of Moonlight: introduction/about_som.md
     - Installation:
       - Basic Installation: installation/basic-installation.md
       - Virtual Machine Installation: installation/virtual-machine-installation.md
       - Lawful Blade Installation: installation/lawful-blade-installation.md
+  - Parameter Editor:
+    - Overview: parameterseditor/overview.md
+    - Item: parameterseditor/parameditems.md
   - Content Authoring:
     - Authoring Custom Textures: contentauthoring/authoring-custom-textures.md
   - Glossary: introduction/glossary.md
@@ -40,6 +42,12 @@ theme:
         name: Light Mode
         
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
 

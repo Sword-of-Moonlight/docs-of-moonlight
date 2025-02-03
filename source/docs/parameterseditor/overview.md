@@ -1,0 +1,6 @@
+# Overview
+The parameter editor is the central location for creating and customizing all the items, objects, enemies, and NPCs in the game. Depending on which tab you choose at the top, a different table list appears, along with 1-3 configurable screens of information.
+
+Be sure to register any new items you create before you save and close this editor. Also, it is important to note that if you make any changes to an already registered entry in this editor, it is always a good idea to hit the register button before saving and closing, as sometimes certain changes will not show up in the game until they are re-registered. A good example is if you change a model file or a texture file for an item in this database—you will definitely have to re-register it for the changes to take effect.
+
+Be aware that if any of the items that are already placed in a map are changed here, you should also "output" the data in your map editor again before testing (the output function is covered in the map editor section). The same holds true for data that may be deleted from this editor but is referenced in an existing map... So, a good rule of thumb is always to register, save, and output each time you make changes.
