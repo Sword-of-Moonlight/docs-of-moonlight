@@ -22,6 +22,7 @@ The documentation on the website automatically updates any merged changes once a
 - Michael Pearson: In depth research into Sword of Moonlight formats.
 - FromSoftware: Although Sword of Moonlight is a little rough, it's an awesome gift to the community.
 - MkDocs Team: The incredible documentation->static site generator making this possible!
+- Material for MkDocs: Incredible theme support for MkDocs, which we are taking full advantage of. Please support awesome open source projects like [mkdocs-material](https://squidfunk.github.io/mkdocs-material)!
 
 ### License
-CC0 ! Go wild. (flesh this out a bit)
+This documentation is licensed under CC BY-SA 4.0. You can view the license terms [here](https://creativecommons.org/licenses/by-sa/4.0/).

@@ -1,23 +1,30 @@
 site_name: Sword of Moonlight » Compendium
-site_url: https://www.swordofmoonlight.com/
+site_url: https://doc.swordofmoonlight.com/
 
 extra_css:
   - css/extra.css
 
 nav:
   - Home: index.md
-  - Introduction:
+  - SoM Editor:
     - Installation:
-      - Basic Installation: installation/basic-installation.md
-      - Virtual Machine Installation: installation/virtual-machine-installation.md
-      - Lawful Blade Installation: installation/lawful-blade-installation.md
-  - Parameter Editor:
-    - Overview: parameterseditor/overview.md
-    - Item: parameterseditor/parameditems.md
-  - Content Authoring:
-    - Authoring Custom Textures: contentauthoring/authoring-custom-textures.md
-  - Glossary: introduction/glossary.md
-
+      - Basic Installation: editor/installation/basic-installation.md
+      - Virtual Machine Installation: editor/installation/virtual-machine-installation.md
+      - Lawful Blade Installation: editor/installation/lawful-blade-installation.md
+    - Parameter Editor:
+      - Overview: editor/parameterseditor/overview.md
+      - Item: editor/parameterseditor/parameditems.md
+    - Content Authoring:
+      - Authoring Custom Textures: editor/contentauthoring/authoring-custom-textures.md
+  - Glossary: glossary.md
+extra:
+  generator: true
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/66CQdB738d
+    - icon: fontawesome/brands/github
+      link: https://github.com/Sword-of-Moonlight
+copyright: Licensed under CC BY-SA, please use responsibly.
 theme:
   name: material
   logo: assets/mls.webp
@@ -27,6 +34,7 @@ theme:
     - toc.integrate 
     - navigation.sections
     - navigation.expand
+    - navigation.footer
   palette:
     - scheme: default
       primary: light blue
