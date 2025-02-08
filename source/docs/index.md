@@ -12,7 +12,7 @@ If you've searched and still can't find the answers to your questions, you can r
 Scan your eyes to the left of the search bar, and you'll be presented with a switch for toggling between light mode and dark mode.
 
 ### Hello Phone User, Would You Like a Menu?
-If you're browsing this documentation on a portable computation device, you can locate the hamburger menu at the top of the screen and to the far left. Otherwise, you'll find a list of the compendiums content to your left at all times (*on supported displays*.)
+If you're browsing this documentation on a portable computation device, you can locate the hamburger menu at the top of the screen and to the far left.
 
 ### Orange Guidance Soapstone
 If you would like to contribute to this documentation, you can by visiting our [GitHub](https://github.com/Sword-of-Moonlight/docs-of-moonlight) and making a pull request!
@@ -22,6 +22,7 @@ The documentation on the website automatically updates any merged changes once a
 ### Contributors
 - DMPDesign: Wrote the original documentation of which much of this is based on.
 - StolenBattenberg: General documentation maintenance.
+- Verdite Cat: General documentation maintenance.
 
 ### Special Thanks
 - John Osborne: Without his localization, this documentation would not be possible.
@@ -31,4 +32,4 @@ The documentation on the website automatically updates any merged changes once a
 - Material for MkDocs: Incredible theme support for MkDocs, which we are taking full advantage of. Please support awesome open source projects like [mkdocs-material](https://squidfunk.github.io/mkdocs-material)!
 
 ### License
-This documentation is licensed under CC BY-SA 4.0. You can view the license terms [here](https://creativecommons.org/licenses/by-sa/4.0/).
+This documentation is licensed under CC BY-SA 4.0. You can view the license terms and conditions [here](https://creativecommons.org/licenses/by-sa/4.0/).

@@ -16,10 +16,11 @@ nav:
       - Item: editor/parameterseditor/parameditems.md
     - Content Authoring:
       - Authoring Custom Textures: editor/contentauthoring/authoring-custom-textures.md
-    - SoM Games:
-      - Installing Games: game/install-games.md
-      - Compatibility Fixes: game/comp-games.md
-      - Known Bugs: game/bugs-games.md
+  - SoM Editor (ex): editorex/placeholder.md
+  - SoM Games:
+    - Installing Games: game/install-games.md
+    - Compatibility Fixes: game/comp-games.md
+    - Known Bugs: game/bugs-games.md
   - Glossary: glossary.md
 extra:
   generator: true
