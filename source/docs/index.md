@@ -1,9 +1,6 @@
 # Welcome to the Sword of Moonlight Compendium Project!
 Welcome to the Sword of Moonlight Compendium, your one stop shop for 'Sword of Moonlight: The King's Field Making Tool' documentation!
 
-# BIG FAT WARNING - WORK IN PROGRESS.
-# TESTING FOR AUTO UPDATE WORKING !!! IF YOU SEE THIS I'M A FUCKING GOD.
-
 ### Seek Guidance
 Thanks to our chosen documentation generator [MkDocs](https://www.mkdocs.org/), we have the ability to offer you a search function to use if you're looking for something specific. Familiarize yourself with the large 'Search' box in the top right of the screen.
 
@@ -14,6 +11,11 @@ Scan your eyes to the left of the search bar, and you'll be presented with a swi
 
 ### Would You Like a Menu?
 If you're browsing this documentation on a portable computation device, you can locate the hamburger menu at the top of the screen and to the far left. Otherwise, you'll find a list of the compendiums content to your left at all times (*on supported displays*.)
+
+### Orange Guidance Soapstone
+If you would like to contribute to this documentation, you can by visiting our [GitHub](https://github.com/Sword-of-Moonlight/docs-of-moonlight) and making a pull request!
+
+The documentation on the website automatically updates any merged changes once an hour, so we're never far behind what's avaliable in the repository.
 
 ### Special Thanks
 - John Osborne: Without his localization, this documentation would not be possible.
