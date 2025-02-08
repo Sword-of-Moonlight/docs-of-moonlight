@@ -2,7 +2,7 @@
 Welcome to the Sword of Moonlight Compendium, your one stop shop for 'Sword of Moonlight: The King's Field Making Tool' documentation!
 
 ### Seek Guidance
-Thanks to our chosen documentation generator [MkDocs](https://www.mkdocs.org/), we have the ability to offer you a search function to use if you're looking for something specific. Familiarize yourself with the large 'Search' box in the top right of the screen.
+Thanks to our chosen documentation generator [MkDocs](https://www.mkdocs.org/), we have the ability to offer you a search function to use if you're looking for something specific. Familiarize yourself with the large 'Search' box (or magnifying glass) in the top right of the screen.
 
 If you've searched and still can't find the answers to your questions, you can reach other community members through our [Forum](https://forum.swordofmoonlight.com) or the [Sword of Moonlight Discord Server](https://discord.gg/66CQdB738d).
 
