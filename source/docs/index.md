@@ -2,6 +2,7 @@
 Welcome to the Sword of Moonlight Compendium, your one stop shop for 'Sword of Moonlight: The King's Field Making Tool' documentation!
 
 # BIG FAT WARNING - WORK IN PROGRESS.
+# TESTING FOR AUTO UPDATE WORKING !!! IF YOU SEE THIS I'M A FUCKING GOD.
 
 ### Seek Guidance
 Thanks to our chosen documentation generator [MkDocs](https://www.mkdocs.org/), we have the ability to offer you a search function to use if you're looking for something specific. Familiarize yourself with the large 'Search' box in the top right of the screen.
