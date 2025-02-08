@@ -1,5 +1,5 @@
 # Parameter Editor - Items
-![Screenshot of the Parameter Editor](img\paramedit_item.webp)
+![Screenshot of the Parameter Editor](img/paramedit_item.webp)
 The _Items_ screen of the parameter editor allows you to define the items that you will use to create your game. You are limited to a total of 255 unique items, which can be assigned in the item registry list on the left side of the screen.
 
 ### Model Data (Profile Data)
