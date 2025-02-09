@@ -3,6 +3,9 @@ Welcome to the Sword of Moonlight Compendium, your one stop shop for 'Sword of M
 
 If you've found yourself here because you're looking to play a game that was made with SoM, we've got you covered [here](game/install-games.md), if you're instead here because you want to try your hand at making a game with SoM yourself - read on!
 
+# Legacy Documentation
+While no longer updated, the legacy documentation is still more complete than this new effort - and so it is avaliable [here](https://doc.swordofmoonlight.com/old/).
+
 ### Seek Guidance
 Thanks to our chosen documentation generator [MkDocs](https://www.mkdocs.org/), we have the ability to offer you a search function to use if you're looking for something specific. Familiarize yourself with the large 'Search' box (or magnifying glass) at the top right of the screen.
 
