@@ -1,13 +1,15 @@
+/* General Styles */
 h3 
 {
 	color:#25c5da;
 }
 
-.md-header__button .md-logo
+img
 {
 	image-rendering: crisp-edges;
 }
 
+/* SOM Stuff */
 .som-doc-block
 {
 	background-color: #00008018;
