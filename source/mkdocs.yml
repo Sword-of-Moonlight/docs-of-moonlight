@@ -1,9 +1,10 @@
 site_name: Sword of Moonlight » Compendium
 site_url: https://doc.swordofmoonlight.com/
-
+site_description: Documentation for Sword of Moonlight: King's Field Making Tool
+site_author: DMPDesign, StolenBattenberg, Verdite Cat
+copyright: Licensed under CC BY-SA, please use responsibly.
 extra_css:
   - css/extra.css
-
 nav:
   - Home: index.md
   - SoM Editor:
@@ -29,7 +30,6 @@ extra:
       link: https://discord.gg/66CQdB738d
     - icon: fontawesome/brands/github
       link: https://github.com/Sword-of-Moonlight
-copyright: Licensed under CC BY-SA, please use responsibly.
 theme:
   name: material
   logo: assets/mls.webp
@@ -52,8 +52,7 @@ theme:
       accent: teal
       toggle:
         icon: material/weather-sunny
-        name: Light Mode
-        
+        name: Light Mode        
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -63,7 +62,6 @@ markdown_extensions:
       alternate_style: true
   - toc:
       permalink: true
-
 plugins:
   #- with-pdf:
       #author: Sword of Moonlight Community

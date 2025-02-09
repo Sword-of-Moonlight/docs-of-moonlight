@@ -1,5 +1,12 @@
-h3 {
+h3 
+{
 	color:#25c5da;
+}
+
+.md-header__button 
+{
+	image-rendering: crisp-edges;
+	cursor: pointer;
 }
 
 .som-doc-block
