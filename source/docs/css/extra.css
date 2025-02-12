@@ -1,7 +1,15 @@
-h3 {
+/* General Styles */
+h3 
+{
 	color:#25c5da;
 }
 
+img
+{
+	image-rendering: crisp-edges;
+}
+
+/* SOM Stuff */
 .som-doc-block
 {
 	background-color: #00008018;

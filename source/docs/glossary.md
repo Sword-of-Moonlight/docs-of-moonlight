@@ -22,3 +22,5 @@
 | TXR | A proprietary texture format used to store raster, 2D bitmaps (and mipmaps) for SoM. |
 | WAV | An audio format containing PCM samples. |
 | CINEPAK | A terrible video codec which old SoM developers liked to use. |
+| Game Root | The install location of the game, where the folders "PARAM" and "DATA" are located. |
+| Editor Instance | An installation of the SoM Editor |

@@ -1,5 +1,9 @@
 # Parameter Editor - Items
-![Screenshot of the Parameter Editor](img/paramedit_item.webp)
+
+<figure markdown="span">
+    ![Screenshot of the Parameter Editor](img/paramedit_item.webp)
+  <figcaption>The 'Items' screen of the Parameter Editor</figcaption>
+</figure>
 The _Items_ screen of the parameter editor allows you to define the items that you will use to create your game. You are limited to a total of 255 unique items, which can be assigned in the item registry list on the left side of the screen.
 
 ### Model Data (Profile Data)
@@ -26,8 +30,7 @@ The class field toggle is used to decide if an item is crucial or not. A crucial
 !!! tip
     Always set key items to crucial, or you risk the player soft locking!
 
-<div class="som-doc-block" markdown="1">
-<div class="som-doc-block" markdown="1">### Weapons</div>
+### Weapons
 This grouping will only be active when the profile selected is for a weapon.
 
 ### Slash, Smash, Stab, Flame, Earth, Wind, Water and Holy
@@ -67,24 +70,18 @@ Below is a table of avaliable effects:
 
 ### Sword Magic ID
 This field allows you to assign a magic (by ID) that the sword is capable of casting.
-</div>
 
-<div class="som-doc-block" markdown="1">
-<div class="som-doc-block" markdown="1">### Armor</div>
+### Armor
 This grouping will only be active when the profile selected is for a piece of armor (helm, body, arms, legs).
 
 Each of these fields will match what the fields for weapons do - however the offensive attributes are now defending attributes, and reduce damage recieved by enemies.
 
 Usage of weight in armor is unknown.
-</div>
 
-<div class="som-doc-block" markdown="1">
-<div class="som-doc-block" markdown="1">### Items</div>
+### Items
 This grouping will only be active when the profile selected is for an item (usable).
 
 TO-DO.
-
-</div>
 
 ### Description
 This description is accessible in game by creating an access event, which will cause the text written here to be presented to the player.
