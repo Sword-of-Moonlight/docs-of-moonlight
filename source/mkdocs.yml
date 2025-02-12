@@ -41,18 +41,20 @@ theme:
     - navigation.expand
     - navigation.footer
   palette:
-    - scheme: default
-      primary: light blue
-      accent: deep purple
-      toggle:
-        icon: material/weather-night
-        name: Dark Mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: cyan
       accent: teal
       toggle:
         icon: material/weather-sunny
-        name: Light Mode        
+        name: Light Mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode      
 markdown_extensions:
   - admonition
   - pymdownx.details
