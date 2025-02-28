@@ -17,6 +17,8 @@ nav:
       - Item: editor/parameterseditor/parameditems.md
     - Content Authoring:
       - Authoring Custom Textures: editor/contentauthoring/authoring-custom-textures.md
+    - File Formats:
+      - SND (Sound) Format: editor/ff/snd-file-format.md
   - SoM Editor (ex): editorex/placeholder.md
   - SoM Games:
     - Installing Games: game/install-games.md
