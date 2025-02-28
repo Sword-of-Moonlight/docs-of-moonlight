@@ -17,7 +17,7 @@ typedef struct
 // This structure doesn't exist in SND files, and is just representation of how the data is laid out.
 typedef struct
 {
-    SND_HEADER header;                      // SND Header
-    u8[header.u16x0C * header.sampleCount]; // PCM Sample Buffer
+    SND_HEADER header;                                      // SND Header
+    u8 sampleBuffer[header.u16x0C * header.sampleCount];    // PCM Sample Buffer
 } SND_LAYOUT;
 ```
