@@ -19,6 +19,9 @@ nav:
       - Authoring Custom Textures: editor/contentauthoring/authoring-custom-textures.md
     - File Formats:
       - SND (Sound) Format: editor/ff/snd-file-format.md
+      - TXR (Texture) Format: editor/ff/txr-file-format.md
+      - Item PR2 (Database) Format: editor/ff/pr2-item-file-format.md
+      - Enemy PR2 (Database) Format: editor/ff/pr2-enemy-file-format.md
   - SoM Editor (ex): editorex/placeholder.md
   - SoM Games:
     - Installing Games: game/install-games.md
