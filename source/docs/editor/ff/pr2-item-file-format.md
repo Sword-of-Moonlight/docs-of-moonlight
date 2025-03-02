@@ -10,8 +10,8 @@ typedef struct
     char modelFile[31];     // The model file name
     u16 type;               // The type of item
     float center;           // Collision related?..
-    u16 u16x11;             // Unknown.
-    u16 u16x13;             // Unknown
+    u16 u16x44;             // Unknown.
+    u16 u16x46;             // Unknown
     u8  animIds[4];         // Animations for the item. Test...
     u16 soundIDs[4];        // Sounds linked to the item? Test...
     u8 soundPitchs[4];      // Pitch to play sounds at? Test...
