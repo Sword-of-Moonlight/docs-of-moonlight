@@ -28,6 +28,9 @@ nav:
     - Lawful Blade:
       - Overview: lawfulblade/lawful-brief.md
       - Installation: lawfulblade/lawful-install.md
+      - Configuration: lawfulblade/lawful-preference.md
+      - Creating Your First Instance: lawfulblade/lawful-create-instance.md
+      - Creating Your First Project: lawfulblade/lawful-create-project.md
   - SoM Games:
     - Installing Games: game/install-games.md
     - Compatibility Fixes: game/comp-games.md
