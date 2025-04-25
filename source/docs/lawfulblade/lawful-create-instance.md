@@ -6,13 +6,13 @@
 Instances are the bread and butter of Lawful Blade. They are at their core a SoM (or third party editor) installation which is managed by Lawful Blade. This is important when you're using custom content in SoM, since you'll be overriding a lot of files which are part of the editor itself - if you've got multiple projects on the go at one time, you need to have seperate editor enviroments.
 
 ### How to do...
-You can create a new instance in two ways inside Lawful Blade. 
+You can create a new instance in two ways inside Lawful Blade...
 
 **Option #1**: Through the menu bar. 
 Open up the 'File' tab, and hover over 'New...' in the menu that opens. A second menu will open which will allow you to choose the "Instance..." option, which will take you to the dialog shown above.
 
 **Option #2**: Through the 'Instances' tab.
-This shouldn't be hard to find - it's the default tab when you open Lawful Blade. Simply click on the "Create New Instance" button on the left hand side of the window and you will be taken to the dialog shown above.
+Simply click on the "Create New Instance" button on the left hand side of the window and you will be taken to the dialog shown above.
 
 Below is a brief overview of the fields inside the dialog, and what they do.
 
