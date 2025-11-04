@@ -39,6 +39,8 @@ nav:
         - Effect .DAT File Format: editor/ff/dat-sfx-file-format.md
       - Map:
         - .MPX File Format: editor/ff/map-mpx-file-format.md
+      - Misc:
+        - .LVT File Format: editor/ff/lvt-file-format.md
   - SomEx Editor: 
     - PlaceHolder: editorex/placeholder.md
   - SoM Games:
