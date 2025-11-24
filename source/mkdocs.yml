@@ -39,6 +39,7 @@ nav:
         - Effect .DAT File Format: editor/ff/dat-sfx-file-format.md
       - Map:
         - .MPX File Format: editor/ff/map-mpx-file-format.md
+        - .PRT File Format: editor/ff/map-prt-file-format.md
       - Misc:
         - .LVT File Format: editor/ff/lvt-file-format.md
         - .DAT File Format (SYS): editor/ff/sys-dat-file-format.md
