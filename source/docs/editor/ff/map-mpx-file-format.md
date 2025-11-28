@@ -272,7 +272,6 @@ typedef struct
 
 typedef struct
 {
-    u32 u32x00;         // Unknown. Always seems to be 1...
     u16 textureID;      // ID of texture inside the texture block
     u16 numIndices;     // Number of indices in the MSX mesh
     u16 numVertices;    // Number of vertices in the MSX mesh
@@ -282,14 +281,33 @@ typedef struct
 {
     u32 blockVertexID;  // Index of a vertex within the global MPX vertex buffer (for position, texcoord)
     u8 colour[4];       // Colour of the vertex from the lightmap bake stage. BGRX (X = unused)
-} MPX_MESH_MSX_VERTEX;
+} MPX_MESH_MSX_PACKET;
 
 typedef struct
 {
     MPX_MESH_HEADER header;         // header of this mesh
     u16 indices[header.numIndices]; // indices to vertices ! INSIDE ! this mesh, not the global vertex buffer
-    MPX_MESH_MSX_VERTEX vertices[header.numVertices];   // vertex data for the MSX
+    MPX_MESH_MSX_PACKET vertices[header.numVertices];   // vertex data for the MSX
+} MPX_MESH_MSX_SUBMESH;
+
+typedef struct
+{
+    u32 submeshCount;                               // Submesh count - split by textures
+    MPX_MESH_MSX_SUBMESH submeshes[submeshCount];
 } MPX_MESH_MSX;
+
+typedef struct
+{
+    u32 mhmSize;
+    MHM_LAYOUT collisionMesh;   // The size of the mesh is equaL TO mhmSize
+} MPX_MHM;
+
+typedef struct
+{
+    u32 numMHM;
+    MPX_MHM mhms[numMHM];
+} MPX_MHM_BLOCK;
+
 ```
 !!! information
     The meshes inside MPX files are different to the other 4 types of meshes SoM already uses... I'm calling these 'MSX' meshes - but they don't officially have a name. MSX comes from the _MS_M file (which these are derived from), and the MP_X_ file (this, which these are inside).
@@ -323,6 +341,6 @@ typedef struct
 
     MPX_VERTEX_BLOCK vertexBlock;  // These vertices are shared by every single mesh in the MPX.
     MPX_MESH_MSX meshes[];         // Variable. There are as many meshes as there are -USED- tiles in MPX_WORLD.
-    MHM_LAYOUT collisionMeshes[];  // Variable. There are as many collision meshes as there are unique tiles in MPX_WORLD.
+    MPX_MHM_BLOCK mhmBlock;        // Variable. depends on number of mhms
 } MPX_LAYOUT;
 ```
