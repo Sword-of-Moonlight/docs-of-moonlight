@@ -25,24 +25,24 @@ nav:
       - Creating Your First Project: lawfulblade/lawful-create-project.md
   - SoM Hacking:
     - File Formats:
-      - Profile:
-        - NPC .PRF File Format: editor/ff/prf-npc-file-format.md
+      - Database:
+        - Object File(s): editor/ff/param-object-file-formats.md
+        - System File(s): editor/ff/param-system-file-formats.md
+        - .LVT (Level Graph): editor/ff/lvt-file-format.md
+      - Texture:
+        - .TXR File Format: editor/ff/txr-file-format.md
       - Sound:
         - .SND File Format: editor/ff/snd-file-format.md
-      - Texture:     
-        - .TXR File Format: editor/ff/txr-file-format.md
-      - Database:
-        - Item .PR2 File Format: editor/ff/pr2-item-file-format.md
-        - Object .PR2 File Format: editor/ff/pr2-obj-file-format.md
-        - NPC .PR2 File Format: editor/ff/pr2-npc-file-format.md
-        - Enemy .PR2 File Format: editor/ff/pr2-enemy-file-format.md
-        - Effect .DAT File Format: editor/ff/dat-sfx-file-format.md
       - Map:
         - .MPX File Format: editor/ff/map-mpx-file-format.md
+        - .EVT File Format: editor/ff/map-evt-file-format.md
         - .PRT File Format: editor/ff/map-prt-file-format.md
-      - Misc:
-        - .LVT File Format: editor/ff/lvt-file-format.md
-        - .DAT File Format (SYS): editor/ff/sys-dat-file-format.md
+      - Database (OLD):
+        - Item .PR2 File Format: editor/ff/pr2-item-file-format.md       
+        - NPC .PR2 File Format: editor/ff/pr2-npc-file-format.md
+        - NPC .PRF File Format: editor/ff/prf-npc-file-format.md
+        - Enemy .PR2 File Format: editor/ff/pr2-enemy-file-format.md
+        - Effect .DAT File Format: editor/ff/dat-sfx-file-format.md
   - SomEx Editor: 
     - PlaceHolder: editorex/placeholder.md
   - SoM Games:
