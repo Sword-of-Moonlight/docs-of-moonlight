@@ -24,3 +24,5 @@
 | CINEPAK | A terrible video codec which old SoM developers liked to use. |
 | Game Root | The install location of the game, where the folders "PARAM" and "DATA" are located. |
 | Editor Instance | An installation of the SoM Editor |
+| Desk Session | Working furiously while furious and rejecting any outside influence |
+| Verdite Cat | The mystical being you always add to the special thanks section of your credits |

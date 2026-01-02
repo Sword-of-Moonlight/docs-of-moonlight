@@ -15,42 +15,38 @@ nav:
       - Authoring Custom Objects: editor/contentauthoring/auth-object.md
       - Authoring Custom Enemies: editor/contentauthoring/auth-enemy.md
       - Authoring Custom Textures: editor/contentauthoring/auth-texture.md
-  - SoM Tools:
-    - Lawful Blade:
-      - Overview: lawfulblade/lawful-brief.md
-      - Installation: lawfulblade/lawful-install.md
-      - Configuration: lawfulblade/lawful-preference.md
-      - Creating Your First Instance: lawfulblade/lawful-create-instance.md
-      - Managing Instance Packages: lawfulblade/lawful-instance-packages.md
-      - Creating Your First Project: lawfulblade/lawful-create-project.md
-  - SoM Hacking:
-    - File Formats:
-      - Database:
-        - Object File(s): editor/ff/param-object-file-formats.md
-        - System File(s): editor/ff/param-system-file-formats.md
-        - .LVT (Level Graph): editor/ff/lvt-file-format.md
-      - Texture:
-        - .TXR File Format: editor/ff/txr-file-format.md
-      - Sound:
-        - .SND File Format: editor/ff/snd-file-format.md
-      - Map:
-        - .MPX File Format: editor/ff/map-mpx-file-format.md
-        - .EVT File Format: editor/ff/map-evt-file-format.md
-        - .PRT File Format: editor/ff/map-prt-file-format.md
-      - Database (OLD):
-        - Item .PR2 File Format: editor/ff/pr2-item-file-format.md       
-        - NPC .PR2 File Format: editor/ff/pr2-npc-file-format.md
-        - NPC .PRF File Format: editor/ff/prf-npc-file-format.md
-        - Enemy .PR2 File Format: editor/ff/pr2-enemy-file-format.md
-        - Effect .DAT File Format: editor/ff/dat-sfx-file-format.md
-  - SomEx Editor: 
-    - PlaceHolder: editorex/placeholder.md
+    - Community Tools:
+      - Lawful Blade:
+        - Overview: lawfulblade/lawful-brief.md
+        - Installation: lawfulblade/lawful-install.md
+        - Configuration: lawfulblade/lawful-preference.md
+        - Creating Your First Instance: lawfulblade/lawful-create-instance.md
+        - Managing Instance Packages: lawfulblade/lawful-instance-packages.md
+        - Creating Your First Project: lawfulblade/lawful-create-project.md
   - SoM Games:
     - Installing Games: game/install-games.md
     - Compatibility Fixes: game/comp-games.md
     - Known Bugs: game/bugs-games.md
-
-
+  - SoM Hacking:
+    - File Formats:
+      - Database:
+        - Object File(s): editor/ff/param-object-file-formats.md
+        - Item File(s): editor/ff/param-item-file-formats.md
+      - Map:
+        - .MPX File Format: editor/ff/map-mpx-file-format.md
+        - .EVT File Format: editor/ff/map-evt-file-format.md
+        - .PRT File Format: editor/ff/map-prt-file-format.md
+      - Texture:
+        - .TXR File Format: editor/ff/txr-file-format.md
+      - Sound:
+        - .SND File Format: editor/ff/snd-file-format.md
+      - Misc:
+        - .LVT (Level Graph): editor/ff/lvt-file-format.md
+        - System File(s): editor/ff/param-system-file-formats.md
+        - Effect .DAT File Format: editor/ff/dat-sfx-file-format.md
+        - NPC .PR2 File Format: editor/ff/pr2-npc-file-format.md
+        - NPC .PRF File Format: editor/ff/prf-npc-file-format.md
+        - Enemy .PR2 File Format: editor/ff/pr2-enemy-file-format.md 
   - Glossary: glossary.md
 extra:
   generator: true

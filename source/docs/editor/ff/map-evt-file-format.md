@@ -1,7 +1,7 @@
 ### Overview
 EVT files are used to store map events.
 
-Thanks to Mercy for documenting this format.
+A special thanks to Mercy for documenting all the operations and valid values.
 
 ### EVT Header
 ```c

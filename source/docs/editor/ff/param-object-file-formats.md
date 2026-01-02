@@ -1,6 +1,8 @@
 ### Overview
 Objects (as far as data goes) are made up of three file formats in Sword of Moonlight: .PR2, .PRM, .PRF.  Each of these files handles a different part of object definition.
 
+A special thanks to HwitVulf and Holy_Diver/Michael (R.I.P) for their initial findings on these formats.
+
 ### Object PRF Format
 The Object PRF (\[PR\]o\[F\]ile) defines basic constant data for an object, without any user properties.  These are used within the SOM_EDITOR only as loose files, and are how objects are registered for use in the editor.
 
@@ -42,7 +44,7 @@ typedef struct  // BYTE LENGTH: 108
 
     /* 0x68 */ u8 loopAnimation;            // If animation should loop (assuming trap)
     /* 0x69 */ u8 invisible;                // If the object is invisible.
-    /* 0x6A */ u8 slotKeyID;                // Special ID which must match with an item's to be able to slot the item into the object
+    /* 0x6A */ u8 slotKeyID;                // Special ID which must match with an items to be able to slot the item into the object. See Item PRF.
     /* 0x6B */ u8 allowXZRotation;          // If rotation is allowed on X and Z axis.
 } OBJECT_PRF;
 ```
