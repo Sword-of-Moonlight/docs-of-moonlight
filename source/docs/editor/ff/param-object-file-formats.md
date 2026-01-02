@@ -86,7 +86,7 @@ typedef struct  // BYTE LENGTH: 56.
     /* 0x00 */ char name[31];       // User name of the object.
     /* 0x1F */ u8 revealed;         // If the object is revealed by "secret uncovering effects"
     /* 0x20 */ f32 scale;           // Uniform scale of the object.
-    /* 0x24 */ u16 pr2Index;        // Index into the PR2 file for base PRF data.
+    /* 0x24 */ s16 pr2Index;        // Index into the PR2 file for base PRF data.
     /* 0x26 */ u16 unkx26;          // Unknown Use, Unknown Type.
     /* 0x28 */ union {
         /* ---- */ OBJECT_PRM_DATA_TRAP trapData;   // Data when the PRF is a trap of any type.

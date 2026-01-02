@@ -67,6 +67,101 @@ The Item PR2 Format acts as a simple database of PRF files, and is used to store
 typedef struct  // BYTE LENGTH: Variable, at least 4.
 {
     /* 0x00 */ u32 itemNum;
-    /* 0x04 */ OBJECT_PRF items[itemNum];
+    /* 0x04 */ ITEM_PRF items[itemNum];
 } ITEM_PR2;
 ```
+
+### Item PRM Format
+The Item PRM (\[P\]a\[R\]a\[M\]eters) is used to store registry data from the editor.
+
+```c
+typedef struct {  // BYTE LENGTH: 40.
+    /* 0x00 */ f32 weight;          // Equip weight
+    /* 0x04 */ u8 slashDef;         // Slash Defence
+    /* 0x05 */ u8 smashDef;         // Smash Defence
+    /* 0x06 */ u8 stabDef;          // Stab Defence
+    /* 0x07 */ u8 fireDef;          // Fire Defence
+    /* 0x08 */ u8 earthDef;         // Earth Defence
+    /* 0x09 */ u8 windDef;          // Wind Defence
+    /* 0x0A */ u8 waterDef;         // Water Defence
+    /* 0x0B */ u8 holyDef;          // Holy Defence
+    /* 0x0C */ u8 effectType;       // 0 = None, 1 = Dark, 2 = Curse, 3 = HP Recover, 4 = HP Drain, 5 = HP Absorb, 6 = MP Recover, 7 = MP Drain, 8 = MP Absorb, 9 = Strength Up, 10 = Magic Up, 11 = Poison Resist, 12 = Paralyse Resist, 13 = Dark Resist, 14 = Curse Resist, 15 = Slow Resist
+    /* 0x0D */ u8 effectPotency;    // The strength at which effectType is applied at 
+    /* 0x0E */ u8 unkx0E[26];       // Unknown Bytes. Always 0/garbage?
+} ITEM_PRM_DATA_ARMOUR;
+
+typedef struct {  // BYTE LENGTH: 40.
+    /* 0x00 */ f32 weight;          // Equip weight
+    /* 0x04 */ u8 slashDamage;      // Slash Damage
+    /* 0x05 */ u8 smashDamage;      // Smash Damage
+    /* 0x06 */ u8 stabDamage;       // Stab Damage
+    /* 0x07 */ u8 fireDamage;       // Fire Damage
+    /* 0x08 */ u8 earthDamage;      // Earth Damage
+    /* 0x09 */ u8 windDamage;       // Wind Damage
+    /* 0x0A */ u8 waterDamage;      // Water Damage
+    /* 0x0B */ u8 holyDamage;       // Holy Damage
+    /* 0x0C */ u8 effectType;       // 0 = None, 1 = Dark, 2 = Curse, 3 = HP Recover, 4 = HP Drain, 5 = HP Absorb, 6 = MP Recover, 7 = MP Drain, 8 = MP Absorb, 9 = Strength Up, 10 = Magic Up, 11 = Poison Resist, 12 = Paralyse Resist, 13 = Dark Resist, 14 = Curse Resist, 15 = Slow Resist
+    /* 0x0D */ u8 effectPotency;    // The strength at which effectType is applied at 
+    /* 0x0E */ u8 magicID;          // Magic to cast.
+    /* 0x0F */ u8 unkx0F[25];       // Unknown Bytes. Always 0/garbage?
+} ITEM_PRM_DATA_WEAPON;
+
+typedef struct 
+{
+    /* 0x00 */ u16 hpRecover;       // The amount of hp recovered
+    /* 0x02 */ u16 mpRecover;       // The amount of mp recovered
+    /* 0x04 */ u8 curePoison;       // If poison status is removed by the item
+    /* 0x05 */ u8 cureParalyse;     // If paralyse status is removed by the item
+    /* 0x06 */ u8 cureDark;         // If dark status is removed by the item
+    /* 0x07 */ u8 cureCurse;        // If curse status is removed by the item
+    /* 0x08 */ u8 cureSlow;         // If slow status is removed by the item
+    /* 0X09 */ u8 unknownBytes[23]; // Unknown bytes.
+} ITEM_PRM_DATA_USABLE_RECOVERY;
+
+typedef struct
+{
+    /* 0x00 */ s8 displayType;          // -1 = None, 0 = Automap, 1 = Picture, 2 = Zone Defined Map (#1), 3 = Zone Defined Map (#2), 4 = Zone Defined Map (#3)
+    /* 0x01 */ char pictureFile[31];    // when displayType == 1. WARNING: CAN OVERFLOW
+} ITEM_PRM_DATA_USABLE_DISPLAYMAP;
+
+typedef struct {
+    /* 0x00 */ u8 usableType;   // The type of usable. 0 = Normal, 1 = Recovery, 2 = Display Map, 3 = Assess, 4 = Reveals
+    /* 0x01 */ u8 unusable;     // If the item cannot be used (weird anti logic, fromsoft). 0 = can use, 1 = can't use
+    /* 0x02 */ u8 dontConsume;  // If the item is not consumed. 0 = consumed, 1 = not consumed
+    /* 0X03 */ u8 unkx03[5];    // Unknown Bytes.
+
+    /* 0x08 */ union
+    {
+        /* ---- */ ITEM_PRM_DATA_USABLE_RECOVERY recoveryData;      // Data when usableType == recovery
+        /* ---- */ ITEM_PRM_DATA_USABLE_DISPLAYMAP displayMapData;  // Data when usableType == display map
+
+        /* ---- */ u8 raw[32];  // I believe assess, reveals and normal don't have additional data.
+    };
+} ITEM_PRM_DATA_USABLE;
+
+typedef struct  // BYTE LENGTH: 336.
+{
+    /* 0x000 */ s16 pr2Index;            // Index into the PR2 file for base PRF data.
+    /* 0x002 */ char name[31];           // Name
+    /* 0x021 */ char description[241];   // Description
+    /* 0x112 */ u8 unkx112[16];          // Unknown Bytes. Always 0?
+    /* 0x122 */ u8 priority;             // 0 = Default, 1 = Crucial (does not despawn)
+    /* 0x123 */ u8 unkx123[5];           // Unknown Bytes. Always 0?
+
+    /* 0x128 */ union {
+        /* ----- */ ITEM_PRM_DATA_ARMOUR armourData;     // Data when the PRF is armour (equipment?)
+        /* ----- */ ITEM_PRM_DATA_WEAPON weaponData;     // Data when the PRF is weapon (equipment?) 
+        /* ----- */ ITEM_PRM_DATA_USABLE usableData;     // Data when the PRF is usable
+
+        /* ----- */ u8 raw[40];                      // Raw Data
+    };
+} ITEM_PRM;
+
+typedef struct  // BYTE LENGTH: 84,000. (Fixed size buffer)
+{
+    ITEM_PRM items[250];     // Always 250
+} ITEM_PRM_LAYOUT;
+```
+
+!!! warning
+    The pictureFile field in ITEM_PRM_DATA_USABLE_DISPLAYMAP <CAN> overflow! be aware if you have a filename to long, it will destroy n amount of subsiquent item definitions in the PRM file.
