@@ -1,7 +1,11 @@
 ### Overview
 Objects (as far as data goes) are made up of three file formats in Sword of Moonlight: .PR2, .PRM, .PRF.  Each of these files handles a different part of object definition.
 
-A special thanks to HwitVulf and Holy_Diver/Michael (R.I.P) for their initial findings on these formats.
+### Special Thanks
+- HwitVulf: Initial PRF findings.
+- Holy_Diver: Further PRF findings.
+- kurobake: Further PRF findings, validating prior findings.
+- bbMercy: Testing and validating prior findings.
 
 ### Object PRF Format
 The Object PRF (\[PR\]o\[F\]ile) defines basic constant data for an object, without any user properties.  These are used within the SOM_EDITOR only as loose files, and are how objects are registered for use in the editor.
@@ -11,22 +15,22 @@ typedef struct  // BYTE LENGTH: 108
 {
     /* 0x00 */ char name[31];               // Profile name. S-JIS, 15 usable 2 byte characters + null terminator.
     /* 0x1F */ char modelFile[31];          // Model name.   ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^
-    /* 0x3E */ u8 billboard;                // 0 or 1. If object is billboard (Ex only?)
-    /* 0x3F */ u8 openable;                 // 0 or 1. If object is openable (door, chest... Ex only?)
+    /* 0x3E */ u8 billboard;                // 0 or 1. If object is billboarded (Y axis only)
+    /* 0x3F */ u8 openable;                 // 0 or 1. If object is openable (door, chest... unknown function - crashes game in certain circumstances)
 
     /* 0x40 */ f32 colliderHeight;          // Collider height
     /* 0x44 */ f32 colliderRW;              // Collider radius or height
     /* 0x48 */ f32 colliderRD;              // Collider radius or depth
 
-    /* 0x4C */ f32 f32x4C;                  // Unknown use. 1.0F in a few files
+    /* 0x4C */ f32 f32x4C;                  // Seemingly junk. 1.0F in a few files.
 
     /* 0x50 */ u8 colliderMode;             // 0 to 2. 0 = Box, 1 = Cylinder, 2 = Special (Traps?.. Probably mesh collision)
     /* 0x51 */ u8 hasScrollingTexture1;     // 0 to 2. 0 = no, 1 = horizontal, 2 = vertical. If the texture 1's UVs should be scrolled.
     /* 0x52 */ s16 objectClass;             // The type of object. 0 = Static, 1 = Light, 20 = Container, 21 = Chest, 22 = Corpse, 40 = Switch, 
 
-    /* 0x54 */ s16 effectID;                // An ID of an effect to use on the object. Only some effects will work. -1 = None.
+    /* 0x54 */ s16 effectID;                // An ID of an effect to use on the object. Non billboard effects will be spawned at 0,0,0 in the world.
     /* 0x56 */ u8 effectControlPointAnchor; // Which control point (green) the effect is anchored to
-    /* 0x57 */ u8 effectAnimationRate;      // How fast the effect animates?.. Proof pending.
+    /* 0x57 */ u8 effectAnimationRate;      // How fast the effect animates. 1 = No animation
 
     /* 0x58 */ s16 loopingSoundFxID;        // ID of a sound effect to loop (trap only?). -1 = None.
     /* 0x5A */ s16 openingSoundFxID;        // ID of a sound effect to play when opening (chest/door only?). -1 = None.

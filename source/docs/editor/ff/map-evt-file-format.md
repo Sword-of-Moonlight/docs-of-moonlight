@@ -1,7 +1,8 @@
 ### Overview
 EVT files are used to store map events.
 
-A special thanks to Mercy for documenting all the operations and valid values.
+### Thanks
+- bbMercy: Reversing evt operations, noting the valid values for all fields.
 
 ### EVT Header
 ```c

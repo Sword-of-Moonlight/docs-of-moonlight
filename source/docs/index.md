@@ -24,9 +24,11 @@ The documentation on the website automatically updates any merged changes once a
 
 ### Contributors
 - DMPDesign: Wrote the original documentation of which much of this is based on.
-- StolenBattenberg: General documentation maintenance.
-- Verdite Cat: General documentation maintenance.
+- StolenBattenberg: File format reversing, general documentation maintenance.
+- Verdite Cat: General documentation maintenance, judgement on spelling/grammar.
 - JC Bailey: Information on bugs in the SoM engine.
+- bbMercy: File format reversing and theory testing.
+
 
 ### Special Thanks
 - John Osborne: Without his localization, this documentation would not be possible.

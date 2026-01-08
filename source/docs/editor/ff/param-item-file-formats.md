@@ -1,7 +1,8 @@
 ### Overview
 Items (as far as data goes) are made up of three file formats in Sword of Moonlight: .PR2, .PRM, .PRF.  Each of these files handles a different part of item definition.
 
-A special thanks to Holy_Diver/Michael (R.I.P) for his initial findings on these formats.
+### Special Thanks
+- Holy_Diver: Initial format findings.
 
 ### Item PRF Format
 The Item PRF (\[PR\]o\[F\]ile) defines basic constant data for an item, without any user properties.  These are used within the SOM_EDITOR only as loose files, and are how items are registered for use in the editor.
