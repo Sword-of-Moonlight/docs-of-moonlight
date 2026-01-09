@@ -1,36 +1,57 @@
 ### Overview
-TXR files are a super striped back version raster image format used for textures.
+TXR files are used in SoM to store textures for 3D rendering in SoM. Usually, 2D elements use BMP (Microsoft Bitmap) files instead. They're super stripped back, but contain just about everything you really need.
 
-### C Style Specification
+### TXR Header
 ```c
-typedef struct 
+typedef struct  // BYTE LENGTH: 16
 {
-    u32 width;          // Width
-    u32 height;         // Height
-    u32 bitsPerPixel;   // Number of bits used per pixel
-    u32 depth;          // Depth - mipmap levels
+    /* 0x00 */ u32 width;           // Image width
+    /* 0x04 */ u32 height;          // Image height
+    /* 0x08 */ u32 bitsPerPixel;    // How many bits are used to encode a single pixel. When 4 or 8, the TXR will contain a palette.
+    /* 0x0C */ u32 mipmapNum;       // Number of mip maps stored after the main image.
 } TXR_HEADER;
+```
 
-typedef struct
+### TXR Colour
+```c
+typedef struct  // BYTE LENGTH: 4
 {
-    u8 r;
-    u8 g;
-    u8 b;
-    u8 a;
+    /* 0x00 */ u8 r;
+    /* 0x01 */ u8 g;
+    /* 0x02 */ u8 b;
+    /* 0x03 */ u8 a;
 } TXR_COLOUR;
+```
 
-// This structure doesn't exist in TXR files, but represents the layout.
-typedef struct
+### TXR Layout
+```c
+typedef struct  // BYTE LENGTH: variable, at least 16
 {
-    TXR_HEADER header;                      // Header Data
+    /* 0x00 */ TXR_HEADER header;                      // Header Data
 
-    // The palette is only included with < 8bpp>
+    // The palette is only included when bitsPerPixel is less or equal to 8
     if (header.bitsPerPixel <= 8)
         TXR_COLOUR palette[(2 ^ header.bitsPerPixel)]   // 16 or 256 colours
     
-    // pixel data
-    u8 pixelBuffer[(header.width * (header.bitsPerPixel / 8)) * header.height];
+    // Main pixel data
+    u8 pixelBuffer[(header.width * (header.bitsPerPixel >> 3)) * header.height];
 
-    u8[header.u16x0C * header.sampleCount]; // PCM Sample Buffer
-} SND_LAYOUT;
+    if (header.mipmapNum > 0)
+    {
+        int mipW = header.width;
+        int mipW = header.height;
+
+        for (int i = 0; i < header.mipmapNum; ++i)
+        {
+            // Each mip map is 1/2 the size of the last, starting with 1/2 the size of the main pixel data
+            mipW >>= 1;
+            mipH >>= 1;
+
+            u8 mipmap[(header.width * (header.bitsPerPixel >> 3)) * header.height];
+        }
+    }
+} TXR_LAYOUT;
 ```
+
+!!! warning
+    This structure doesn't actually exist in SND files, but offers an overview into how a file in the format will be arranged.
