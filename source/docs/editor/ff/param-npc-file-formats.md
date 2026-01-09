@@ -71,3 +71,45 @@ typedef struct  // BYTE LENGTH: Variable, at least 4096
     /* 0x1000 */ // -- First PRF file. NPC_PRF.
 } NPC_PR2;
 ```
+
+### NPC PRM Format
+The NPC PRM (\[P\]a\[R\]a\[M\]eters) is used to store registry data from the editor.
+
+```c
+typedef struct
+{
+    /* 0x000 */ s16 pr2Index;            // Index into the PR2 file for base PRF data.
+    /* 0x002 */ u16 hp;                  // HP amount of the NPC.
+    /* 0x004 */ f32 scale;               // Uniform scale of the NPC.
+    /* 0x008 */ char[31] name;           // Name.
+    /* 0x027 */ u8 unkx27;               // Unknown. Padding?.. Needs test.
+    /* 0x028 */ u16 maxCoinDrop;         // Maximum amount of coin to drop on death.
+    /* 0x02A */ u16 expValue;            // Amount of EXP to award on death. (this is bugged in som_rt)
+    /* 0x02C */ u8 droppedItemID;        // Item to drop on death. 255 = None.
+    /* 0x02D */ u8 droppedItemChance;    // Item drop chance. % value.
+    /* 0x02E */ u8 basePhysicalDef;      // Base physical defense
+    /* 0x02F */ u8 baseMagicDef;         // Base magic defense
+    /* 0x030 */ u8 slashDef;             // Slash defense
+    /* 0x031 */ u8 smashDef;             // Smash defense
+    /* 0x032 */ u8 stabDef;              // Stab defense
+    /* 0x033 */ u8 flameDef;             // Flame defense
+    /* 0x034 */ u8 earthDef;             // Earth defense
+    /* 0x035 */ u8 windDef;              // Wind defense
+    /* 0x036 */ u8 waterDef;             // Water defense
+    /* 0x037 */ u8 holyDef;              // Holy defense
+    /* 0x038 */ u8 isWalking;            // If the NPC is able to move around. 0 = No, 1 = Yes.
+    /* 0x039 */ u8 unkx39;               // Unknown. Padding?.. Needs test.
+    /* 0x03A */ u8 actionSet;            // Animation set. 0 = Sitting, 1 = Standing, 2 = Sit>Stand ? Order is a little weird. Needs test.
+    /* 0x03B */ u8 isKillable;           // If the NPC can be killed. 0 = No, 1 = Yes.
+    /* 0x03C */ char description[244];   // Description. !! DESCRIPTION MAY ACTUALLY BE SHORTER THAN THIS, IT'S HARD TO TELL. !!
+    /* 0x130 */ u32 unkx130;             // Unknown. Padding?
+    /* 0x134 */ u32 unkx134;             // Unknown. Padding?
+    /* 0x138 */ u32 unkx138;             // Unknown. Padding?
+    /* 0x13C */ u32 unkx13c;             // Unknown. Padding?
+} NPC_PRM;
+
+typedef struct  // BYTE LENGTH: 327,680. (Fixed size buffer)
+{
+    NPC_PRM items[1024];     // There is always 1024 items, which matches the amount of NPCs you can register in the parameter editor.
+} NPC_PRM_LAYOUT;
+```
