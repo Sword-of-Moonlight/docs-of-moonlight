@@ -68,6 +68,6 @@ The NPC PR2 Format acts as a simple database of PRF files, and is used to store 
 typedef struct  // BYTE LENGTH: Variable, at least 4096
 {
     /* 0x0000 */ u32 prfOffset[1024]; // Each U32 is an offset in the file to a PRF. 0 = no PRF
-    /* 0x1000 */ // -- First PRF file.
+    /* 0x1000 */ // -- First PRF file. NPC_PRF.
 } NPC_PR2;
 ```
