@@ -30,8 +30,9 @@ nav:
   - SoM Hacking:
     - File Formats:
       - Database:
-        - Object File(s): editor/ff/param-object-file-formats.md
-        - Item File(s): editor/ff/param-item-file-formats.md
+        - Object PRF/PR2/PRM Files: editor/ff/param-object-file-formats.md
+        - Item PRF/PR2/PRM Files: editor/ff/param-item-file-formats.md
+        - NPC PRF/PR2/PRM Files: editor/ff/param-npc-file-formats.md
       - Map:
         - .MPX File Format: editor/ff/map-mpx-file-format.md
         - .EVT File Format: editor/ff/map-evt-file-format.md
