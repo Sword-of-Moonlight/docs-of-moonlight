@@ -33,7 +33,7 @@ typedef struct  // BYTE LENGTH: variable, at least 384
 {
     /* 0x000 */ char name[31];                   // Profile name. S-JIS, 15 usable 2 byte characters + null terminator.
     /* 0x01F */ char modelFile[31];              // Model name.   ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^
-    /* 0x03E */ u8 unkx3E;                       // Unknown. Usually 0. Needs test.
+    /* 0x03E */ u8 unkx3E;                       // Unknown. Usually 0. Needs test, does something in som_rt.
     /* 0x03F */ u8 unkx3F;                       // Unknown. Usually 1. Needs test.
     /* 0x040 */ f32 colliderHeight;              // Height of a cylinder collider.
     /* 0x044 */ f32 shadowRadius;                // Radius of the blob shadow.
@@ -101,7 +101,7 @@ typedef struct
     /* 0x039 */ u8 unkx39;               // Unknown. Padding?.. Needs test.
     /* 0x03A */ u8 actionSet;            // Animation set. 0 = Sitting, 1 = Standing, 2 = Sit>Stand ? Order is a little weird. Needs test.
     /* 0x03B */ u8 isKillable;           // If the NPC can be killed. 0 = No, 1 = Yes.
-    /* 0x03C */ char description[244];   // Description. !! DESCRIPTION MAY ACTUALLY BE SHORTER THAN THIS, IT'S HARD TO TELL. !!
+    /* 0x03C */ char description[244];   // Description. !!! DESCRIPTION MAY ACTUALLY BE SHORTER OR LONGER THAN THIS, IT'S HARD TO TELL. !!!
     /* 0x130 */ u32 unkx130;             // Unknown. Padding?
     /* 0x134 */ u32 unkx134;             // Unknown. Padding?
     /* 0x138 */ u32 unkx138;             // Unknown. Padding?
