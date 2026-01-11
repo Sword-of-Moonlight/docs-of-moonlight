@@ -7,7 +7,7 @@
 | MDL | A proprietary model format storing animated (bone and vertex) objects, NPCs and enemies. |
 | MDO | A proprietary model format storing static (non animated) objects and items. |
 | MHM | A proprietary model format storing collision meshes for map tiles. |
-| MID, MIDI | An audio format which contains sequenced notes. |
+| MID, MIDI, SF2 | An audio format which contains sequenced notes. |
 | MPX | A proprietary data format which contains a compiled map + the tiles. |
 | MSM | A proprietary model format storing rendering meshes for map tiles. |
 | NPOT | Non power of two, E.G. 3, 7, 15, 73. |

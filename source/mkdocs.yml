@@ -12,9 +12,10 @@ nav:
       - Overview: editor/parameterseditor/overview.md
       - Item: editor/parameterseditor/parameditems.md
     - Content Authoring:
-      - Authoring Custom Objects: editor/contentauthoring/auth-object.md
-      - Authoring Custom Enemies: editor/contentauthoring/auth-enemy.md
-      - Authoring Custom Textures: editor/contentauthoring/auth-texture.md
+      - Objects: editor/contentauthoring/auth-object.md
+      - Enemies: editor/contentauthoring/auth-enemy.md
+      - Textures: editor/contentauthoring/auth-texture.md
+      - Videos: editor/contentauthoring/auth-video.md
     - Community Tools:
       - Lawful Blade:
         - Overview: lawfulblade/lawful-brief.md
@@ -102,7 +103,7 @@ markdown_extensions:
 plugins:
   #- with-pdf:
       #author: Sword of Moonlight Community
-      #copyright: CC0
+      #copyright: CC BY-SA
       #
       #cover: false
       #back_cover: true
