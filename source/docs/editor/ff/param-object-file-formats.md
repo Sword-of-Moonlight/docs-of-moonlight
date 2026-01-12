@@ -16,7 +16,7 @@ typedef struct  // BYTE LENGTH: 108
     /* 0x00 */ char name[31];               // Profile name. S-JIS, 15 usable 2 byte characters + null terminator.
     /* 0x1F */ char modelFile[31];          // Model name.   ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^  ^
     /* 0x3E */ u8 billboard;                // 0 or 1. If object is billboarded (Y axis only)
-    /* 0x3F */ u8 openable;                 // 0 or 1. If object is openable (door, chest... unknown function - crashes game in certain circumstances)
+    /* 0x3F */ u8 openable;                 // 0 or 1. If object is openable (door, chest... unknown function - crashes som_rt in certain circumstances)
 
     /* 0x40 */ f32 colliderHeight;          // Collider height
     /* 0x44 */ f32 colliderRW;              // Collider radius or height

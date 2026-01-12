@@ -5,6 +5,7 @@ Like objects, enemies are made up of the same three "database" files (PRF/PR2/PR
 ### Special Thanks
 - HwitVulf: Initial PRF findings
 - Holy_Diver: Additional PRF findings
+- kurobake: Additional PRF findings
 
 ### Enemy PRF Format
 The enemy PRF (\[PR\]o\[F\]ile) defines basic constant data for an enemy, without any user properties.  These are used within the SOM_EDITOR only as loose files, and are how enemies are registered for use in the editor.
@@ -39,8 +40,8 @@ typedef struct  // BYTE LENGTH: Variable, at least 564
 {
     /* 0x000 */ char prfFile[31];                       // The name of the origin PRF file
     /* 0x01F */ char modelFile[31];                     // The name of the model file
-    /* 0x03E */ u8 unkx3e;                              // Unknown
-    /* 0x03F */ u8 unkx3f;                              // Unknown
+    /* 0x03E */ u8 unkx3e;                              // Unknown. Always zero in known files. Test.
+    /* 0x03F */ u8 unkx3f;                              // Unknown. Always zero in known files. Test.
     /* 0x040 */ u8 useExternalTexture;                  // 0 = No External Texture, 1 = Yes External Texture
     /* 0x041 */ char textureFile[31];
     /* 0x060 */ bitfield u8 {
@@ -48,15 +49,15 @@ typedef struct  // BYTE LENGTH: Variable, at least 564
         /* ----- */ behaviour : 4;                      // 4 bits to define behaviour. These are flags. Bit 0 = ?, Bit 1 = ?, Bit 2 = Evades, Bit 3 = Defends
     }
     /* 0x061 */ u8 trigger;                             // 0 - Cannot be triggered, 1 = Can be triggered
-    /* 0x062 */ u8 unkx62;                              // Unknown.
-    /* 0x063 */ u8 unkx63;                              // Unknown.
+    /* 0x062 */ u8 unkx62;                              // Unknown. Always zero in known files. Test.
+    /* 0x063 */ u8 unkx63;                              // Unknown. Always zero in known files. Test.
     /* 0x064 */ f32 colliderHeight;                     // Height of a cylinder collider.
     /* 0x068 */ f32 shadowRadius;                       // Radius of the blob shadow.
     /* 0x06C */ f32 colliderRadius;                     // Radius of the cylinder collider.
     /* 0x070 */ f32 f32x70;                             // Unknown.
     /* 0x074 */ f32 f32x74;                             // Unknown.
     /* 0x078 */ f32 f32x78;                             // Unknown.
-    /* 0x07C */ u32 unkx7C;                             // Unknown.
+    /* 0x07C */ u32 unkx7C;                             // Unknown. Always zero in known files. Test.
     /* 0x080 */ u8 directAHitDelays[3];                 // Hit delays (in frame values) for direct attack a
     /* 0x083 */ u8 directBHitDelays[3];                 // Hit delays (in frame values) for direct attack b
     /* 0x086 */ u8 directCHitDelays[3];                 // Hit delays (in frame values) for direct attack c
@@ -72,14 +73,14 @@ typedef struct  // BYTE LENGTH: Variable, at least 564
     /* 0x110 */ f32 unkx110;                            // Unknown.
     /* 0x114 */ f32 unkx114;                            // Unknown.
     /* 0x118 */ f32 unkx118;                            // Unknown.
-    /* 0x11C */ f32 unkx11C;                            // Unknown.
-    /* 0x120 */ f32 unkx120;                            // Unknown.
-    /* 0x124 */ f32 unkx124;                            // Unknown.
-    /* 0x128 */ u16 unkx128;                            // Unknown.
-    /* 0x12A */ u16 unkx12A;                            // Unknown.
-    /* 0x12C */ u16 unkx12C;                            // Unknown.
-    /* 0x12E */ u16 unkx12E;                            // Unknown.
-    /* 0x130 */ u32 unkx130;                            // Unknown.
+    /* 0x11C */ f32 directARange;                       // Range (in meters) of direct attack a
+    /* 0x120 */ f32 directBRange;                       // Range (in meters) of direct attack b
+    /* 0x124 */ f32 directCRange;                       // Range (in meters) of direct attack c
+    /* 0x128 */ u16 unkx128;                            // Arc (in degrees) of direct attack a
+    /* 0x12A */ u16 unkx12A;                            // Arc (in degrees) of direct attack b
+    /* 0x12C */ u16 unkx12C;                            // Arc (in degrees) of direct attack c
+    /* 0x12E */ u16 unkx12E;                            // Unknown. Always zero in known files. Test.
+    /* 0x130 */ u32 unkx130;                            // Unknown. Always zero in known files. Test.
     /* 0x134 */ ENEMY_PRF_LIST effectLists[32];         // There are always 32, which corrospond to the 32 animation IDs.
     /* 0x1B4 */ ENEMY_PRF_LIST soundLists[32];          // There are always 32, which corrospond to the 32 animation IDs.
 
