@@ -46,7 +46,7 @@ typedef struct  // BYTE LENGTH: Variable, at least 564
     /* 0x041 */ char textureFile[31];
     /* 0x060 */ bitfield u8 {
         /* ----- */ movement : 4;                       // 4 bits to define movement. 0 = Grounded, 1 = Floating (No Move), 2 = Floating, 5 = (No Move, No Turn)
-        /* ----- */ behaviour : 4;                      // 4 bits to define behaviour. These are flags. Bit 0 = ?, Bit 1 = ?, Bit 2 = Evades, Bit 3 = Defends
+        /* ----- */ behaviour : 4;                      // 4 bits to define behaviour. These are flags. Bit 0 = ?, Bit 1 = Flying related?, Bit 2 = Evades, Bit 3 = Defends
     }
     /* 0x061 */ u8 trigger;                             // 0 - Cannot be triggered, 1 = Can be triggered
     /* 0x062 */ u8 unkx62;                              // Unknown. Always zero in known files. Test.
@@ -76,9 +76,9 @@ typedef struct  // BYTE LENGTH: Variable, at least 564
     /* 0x11C */ f32 directARange;                       // Range (in meters) of direct attack a
     /* 0x120 */ f32 directBRange;                       // Range (in meters) of direct attack b
     /* 0x124 */ f32 directCRange;                       // Range (in meters) of direct attack c
-    /* 0x128 */ u16 unkx128;                            // Arc (in degrees) of direct attack a
-    /* 0x12A */ u16 unkx12A;                            // Arc (in degrees) of direct attack b
-    /* 0x12C */ u16 unkx12C;                            // Arc (in degrees) of direct attack c
+    /* 0x128 */ u16 directAArc;                         // Arc (in degrees) of direct attack a
+    /* 0x12A */ u16 directBArc;                         // Arc (in degrees) of direct attack b
+    /* 0x12C */ u16 directCArc;                         // Arc (in degrees) of direct attack c
     /* 0x12E */ u16 unkx12E;                            // Unknown. Always zero in known files. Test.
     /* 0x130 */ u32 unkx130;                            // Unknown. Always zero in known files. Test.
     /* 0x134 */ ENEMY_PRF_LIST effectLists[32];         // There are always 32, which corrospond to the 32 animation IDs.
