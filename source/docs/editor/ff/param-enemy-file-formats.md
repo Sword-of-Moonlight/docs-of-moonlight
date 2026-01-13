@@ -100,3 +100,80 @@ typedef struct  // BYTE LENGTH: Variable, at least 4096
     /* 0x1000 */ // -- First PRF file. ENEMY_PRF.
 } ENEMY_PR2;
 ```
+
+### Enemy PRM Format
+The enemy PRM (\[P\]a\[R\]a\[M\]eters) is used to store registry data from the editor.
+
+```c
+typedef struct  // BYTE LENGTH: 24
+{
+    /* 0x00 */ u8 emphasis;                 // How prioritised this attack is, how often it is used or favoured?
+    /* 0x01 */ u8 facePlayer;               // If enemy must be facing the player. (0 = No, 1 = Yes)
+    /* 0x02 */ u16 angle;                   // Indirect only. The angle at which the attack can be used. 
+    /* 0x04 */ f32 minimumRange;            // Indirect only. The minimum range at which the attack can be used.
+    /* 0x08 */ u32 unkx08;                  // Indirect only. The maximum range at which the attack can be used.
+    /* 0x0C */ u8 slashAtk;                 // Slash attack
+    /* 0x0D */ u8 smashAtk;                 // Smash attack
+    /* 0x0E */ u8 stabAtk;                  // Stab attack
+    /* 0x0F */ u8 flameAtk;                 // Flame attack
+    /* 0x10 */ u8 earthAtk;                 // Earth attack
+    /* 0x11 */ u8 windAtk;                  // Wind attack
+    /* 0x12 */ u8 waterAtk;                 // Water attack
+    /* 0x13 */ u8 holyAtk;                  // Holy attack
+    /* 0x14 */ u8 statusEffect;             // 0 = None, 1 = Poison, 2 = Paralyse, 3 = Dark, 4 = Curse, 5 = Slow
+    /* 0x15 */ u8 statusProbability;        // Chance for statusEffect to be applied
+    /* 0x16 */ u16 unkx16;                  // Unknown. Likely padding.
+} ENEMY_PRM_ATTACK;
+
+typedef struct  // BYTE LENGTH: 488
+{
+    /* 0x000 */ s16 pr2Index;                           // Index into the PR2 file for base PRF data.
+    /* 0x002 */ u8 unkx002;                             // Unknown
+    /* 0x003 */ u8 unkx003;                             // Unknown
+    /* 0x004 */ f32 scale;                              // Uniform scale of the enemy
+    /* 0x008 */ char[31] name;                          // Name
+    /* 0x027 */ char[236] description;                  // Description
+    /* 0x113 */ u8 unkx113[21];                         // Unknown. Possibily more description bytes.
+    /* 0x128 */ u16 hp;                                 // HP amount of the enemy
+    /* 0x12A */ u8 unkx12A;                             // Unknown
+    /* 0x12B */ u8 unkx12B;                             // Unknown
+    /* 0x12C */ u8 basePhysicalDef;                     // Base physical defense
+    /* 0x12D */ u8 baseMagicDef;                        // Base magic defense
+    /* 0x12E */ u8 slashDef;                            // Slash defense
+    /* 0x12F */ u8 smashDef;                            // Smash defense
+    /* 0x130 */ u8 stabDef;                             // Stab defense
+    /* 0x131 */ u8 flameDef;                            // Flame defense
+    /* 0x132 */ u8 earthDef;                            // Earth defense
+    /* 0x133 */ u8 windDef;                             // Wind defense
+    /* 0x134 */ u8 waterDef;                            // Water defense
+    /* 0x135 */ u8 holyDef;                             // Holy defense
+    /* 0x136 */ u16 visionConeAngle;                    // vision cone angle
+    /* 0x138 */ f32 visionDistance;                     // vision cone distance
+    /* 0x13C */ u8 recognitionChance;                   // Chance that when player is in vision cone, they will be recognised/seen
+    /* 0x13D */ u8 attackBehaviour;                     // 0 = Close, 1 = Far, 9 = Default !?
+    /* 0x13E */ u8 attackReactTime;                     // When an enemy can attack, this is the time it will take before doing so
+    /* 0x13F */ u8 attackFrequency;                     // When an enemy can attack, this is how often it will
+    /* 0x140 */ f32 turnRate;                           // The turn speed of the enemy. 0 = no turn.
+    /* 0x144 */ u8 defendBehaviour;                     // When an enemy is attacked, this is the action type to respond with (0 = None, 1 = Evade, 2 = Defend, 3 = Counter)
+    /* 0x145 */ u8 defendProbability;                   // When an enemy is attacked, this is the chance they will defend
+    /* 0x146 */ u8 defendBuff;                          // When an enemy is attacked and defends, this is the additional defence amount granted.
+    /* 0x147 */ u8 counterAttack;                       // What attack an enemy should counter with (0 = direct a, 1 = direct b, 2 = direct c, 3 = indirect a, 4 = indirect b, 5 = indirect c)
+    /* 0x148 */ u8 regainsHP;                           // If the enemy should regenerate HP when damaged. 0 = No, 1 = Yes
+    /* 0x149 */ u8 unkx149;                             // Unknown. Needs test. (Possible isKillable from NPC?..)
+    /* 0x14A */ u16 maxCoinDrop;                        // Maximum amount of coin to drop on death.
+    /* 0x14C */ u16 expValue;                           // Amount of EXP to award on death
+    /* 0x14E */ u8 droppedItemID;                       // Item to drop on death. 255 = None.
+    /* 0x14F */ u8 droppedItemChance;                   // Item drop chance. % value.
+    /* 0x150 */ f32 movementTriggerRange;               // When movementBehaviour == Trigger, the distance at which the enemy becomes active
+    /* 0x154 */ u8 movementBehaviour;                   // How any enemy should move. 0 = Normal, 1 = Trigger, 2 = Wait (?), 3 = Stay (?)
+    /* 0x155 */ u8 unkx155;                             // Unknown
+    /* 0x156 */ u8 unkx156;                             // Unknown
+    /* 0x157 */ u8 unkx157;                             // Unknown 
+    /* 0x158 */ ENEMY_PRM_ATTACK directAttackA;         // Settings for direct attack a
+    /* 0x170 */ ENEMY_PRM_ATTACK directAttackB;         // Settings for direct attack b
+    /* 0x188 */ ENEMY_PRM_ATTACK directAttackC;         // Settings for direct attack c
+    /* 0x1A0 */ ENEMY_PRM_ATTACK indirectAttackA;       // Settings for indirect attack a
+    /* 0x1B8 */ ENEMY_PRM_ATTACK indirectAttackB;       // Settings for indirect attack b
+    /* 0x1D0 */ ENEMY_PRM_ATTACK indirectAttackC;       // Settings for indirect attack c
+} ENEMY_PRM;
+```
