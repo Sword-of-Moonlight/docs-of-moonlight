@@ -98,7 +98,7 @@ typedef struct
     /* 0x036 */ u8 waterDef;             // Water defense
     /* 0x037 */ u8 holyDef;              // Holy defense
     /* 0x038 */ u8 isWalking;            // If the NPC is able to move around. 0 = No, 1 = Yes.
-    /* 0x039 */ u8 unkx39;               // Unknown. Padding?.. Needs test.
+    /* 0x039 */ u8 regainsHP;            // If the NPC should regenerate HP when damaged.
     /* 0x03A */ u8 actionSet;            // Animation set. 0 = Sitting, 1 = Standing, 2 = Sit>Stand ? Order is a little weird. Needs test.
     /* 0x03B */ u8 isKillable;           // If the NPC can be killed. 0 = No, 1 = Yes.
     /* 0x03C */ char description[244];   // Description. !!! DESCRIPTION MAY ACTUALLY BE SHORTER OR LONGER THAN THIS, IT'S HARD TO TELL. !!!
