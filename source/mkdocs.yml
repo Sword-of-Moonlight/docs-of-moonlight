@@ -16,6 +16,7 @@ nav:
       - Enemies: editor/contentauthoring/auth-enemy.md
       - Textures: editor/contentauthoring/auth-texture.md
       - Videos: editor/contentauthoring/auth-video.md
+      - Sounds: editor/contentauthoring/auth-sounds.md
     - Community Tools:
       - Lawful Blade:
         - Overview: lawfulblade/lawful-brief.md
@@ -35,6 +36,7 @@ nav:
         - Enemy PRF/PR2/PRM Formats: editor/ff/param-enemy-file-formats.md
         - NPC PRF/PR2/PRM Formats: editor/ff/param-npc-file-formats.md
         - Item PRF/PR2/PRM Formats: editor/ff/param-item-file-formats.md
+        - Magic PRF/PR2/PRM Formats: editor/ff/param-magic-file-formats.md
       - Map:
         - .MPX File Format: editor/ff/map-mpx-file-format.md
         - .EVT File Format: editor/ff/map-evt-file-format.md
